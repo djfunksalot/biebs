@@ -3,6 +3,9 @@ Data Filtering and Visualization
 ========================
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 52c93b3... Update README.rst
 .. image:: http://newsie.net/biebs.png
     :target: https://en.wikipedia.org/wiki/Justin_Bieber
     
