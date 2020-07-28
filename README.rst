@@ -2,7 +2,7 @@
 Data Filtering and Visualization
 ========================
 
-.. image:: http://newsie.net/biebs.gif
+.. image:: http://newsie.net/biebs.png
     :target: https://en.wikipedia.org/wiki/Justin_Bieber
     
 
