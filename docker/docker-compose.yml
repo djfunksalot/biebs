@@ -1,0 +1,37 @@
+version: "3.5"
+services:
+  app:
+    container_name: biebs_app
+    build: ./app
+    tty: true
+    stdin_open: true
+    volumes:
+      - "../shiny/:/shiny"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      DB_HOST: 'mongo'
+    networks:
+      - biebs-net
+  mongo:
+    image: mongo:latest
+    container_name: biebs_mongo
+    tty: true
+    stdin_open: true
+    ports:
+      - "27017-27019:27017-27019"
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./mongo-volume:/data/db
+    networks:
+      - biebs-net
+
+networks:
+  biebs-net:
+    external:
+      name: biebs-net
+volumes:
+  data01:
+    driver: local

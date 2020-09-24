@@ -3,11 +3,12 @@ About.ui = function() {
             uiOutput("logged_in"),
             uiOutput("content"))
 }
-About.event_handler = function(input, output, session, cognitomod) {
-  observeEvent(cognitomod$isLogged, {
-    if (cognitomod$isLogged) {
+About.event_handler = function(input, output, session, auth, project, dataset) {
+  observeEvent(auth$isLogged, {
+    if (auth$isLogged) {
       # User is logged
-      userdata <- cognitomod$userdata
+      userdata <- auth$userdata
+      
       # Render user logged.
       output$logged_in <- renderUI({
         p(paste0("Welcome ", unlist(userdata$username),'!'))
