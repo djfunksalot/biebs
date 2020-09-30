@@ -19,7 +19,7 @@ Step 2: Install MongoDB
 
 
 Step 3: Install R libraries
-     install.packages(c('cognitoR','data.table','dplyr','DT','ggplot2','knitr','meta','metafor','metasens','mongolite','mongolite','netmeta','rmarkdown','shiny','shinyBS','shinydashboard','shinyjs','shinyLP','xmeta'), repos='https://cloud.r-project.org/')
+     install.packages(c('cognitoR','data.table','dplyr','DT','ggplot2','knitr','meta','metafor','metasens','mongolite','netmeta','rmarkdown','shiny','shinyBS','shinydashboard','shinyjs','shinyLP','xmeta'), repos='https://cloud.r-project.org/')
 
 Step 4: Start R from the project directory and run it:
 
