@@ -12,10 +12,19 @@ Step 1: Clone this project
 
     git clone https://github.com/djfunksalot/biebs.git
 
-Step 2: Install Shiny and libs
+Step 2: Install MongoDB
 
-    sudo apt-get install r-cran-shiny r-cran-ggplot2 r-cran-dt r-cran-dbplyr
+.. image:: https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png
+    :target: https://docs.mongodb.com/manual/installation/
+
+
+Step 2: Install R libraries
+     install.packages(c('cognitoR','data.table','dplyr','DT','ggplot2','knitr','meta','metafor','metasens','mongolite','mongolite','netmeta','rmarkdown','shiny','shinyBS','shinydashboard','shinyjs','shinyLP','xmeta'), repos='https://cloud.r-project.org/')
 
 Step 3: Start R from the project directory and run it:
 
     shiny::runApp()
+
+Step 4: If you would like to enable authentication, you'll need to follow the configuration instructions for `cognitoR`_.  Otherwise, only the user 'test' will be available.
+
+.. _cognitoR: https://github.com/chi2labs/cognitoR/
